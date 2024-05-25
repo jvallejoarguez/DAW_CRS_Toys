@@ -1,0 +1,241 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, nav, main {
+    width: 100%;
+}
+
+main {
+    flex: 1; /* Esto hace que el main ocupe el espacio restante */
+}
+
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #003366;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    background-color: #004080;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0059b3;
+    color: #ffcc00;
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #003366;
+}
+
+.welcome p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Product Section */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    height: 350px;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-item h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.product-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.product-item .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #003366;
+}
+
+/* Botón Añadir al Carrito */
+.add-to-cart-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff3300;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+    background-color: #cc2900;
+}
+
+/* Sección de Administración */
+.admin-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-section h2 {
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.admin-section label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.admin-section input[type="text"],
+.admin-section input[type="password"],
+admin-section input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos para la lista de pedidos */
+.admin-orders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.order-item h4 {
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.order-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        padding: 10px 0;
+    }
+
+    .product-item {
+        width: calc(50% - 30px);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: calc(100% - 30px);
+    }
+}
